@@ -1,0 +1,33 @@
+#=================================
+# A random doodle
+# 5/17/2021
+# Mark Balagtas
+#=================================
+
+import turtle
+
+wn = turtle.Screen()
+wn.bgcolor('black')
+wn.title('WHAA')
+
+t = turtle.Turtle()
+t.color('white')
+t.pensize(1)
+t.speed('fastest')
+
+def drawspiral(len,turn):
+    if turn < 180:   #the base case
+        for i in range(12):
+            t.forward(len)
+            t.right(30)
+        t.right(turn)
+        drawspiral(len+5,turn+10)
+        
+def main():
+    drawspiral(5,0)
+    
+#======== main =======
+
+main()
+
+
